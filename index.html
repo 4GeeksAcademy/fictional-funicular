@@ -12,39 +12,40 @@
 </head>
 
 <body>
+    <script src="./app.js"></script>
     <div class="m-5">
         <div class="card text-center">
             <div class="card-header">
                 <h1 class="float-start">Titulo</h1>
             </div>
             <div class="card-body">
-                <form class="row g-3">
+                <form class="row g-3" id="form" onsubmit="alertInput()">
                     <div class="alert alert-danger" role="alert">
                         <p class="float-start m-0">alertaaaaaaaaaaaaaaa</p>
                     </div>
                     <div class="col-md-5">
-                        <label for="inputEmail4" class="form-label float-start">Card #</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="XXXXXXXXXXXXXXXXX">
+                        <label for="card" class="form-label float-start">Card #</label>
+                        <input type="number" class="form-control" id="card" placeholder="XXXXXXXXXXXXXXXXX">
                     </div>
                     <div class="col-md-3">
-                        <label for="inputPassword4" class="form-label float-start">CVC #</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="0000">
+                        <label for="cvc" class="form-label float-start">CVC #</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="0000">
                     </div>
                     <div class="col-4">
-                        <label for="inputAddress" class="form-label float-start">Amount</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Amount">
+                        <label for="amount" class="form-label float-start">Amount</label>
+                        <input type="number" class="form-control" id="amount" placeholder="Amount">
                     </div>
                     <div class="col-6">
-                        <label for="inputAddress2" class="form-label float-start">First Name</label>
-                        <input type="text" class="form-control" id="inputAddress2">
+                        <label for="firstName" class="form-label float-start">First Name</label>
+                        <input type="text" class="form-control" id="firstName">
                     </div>
                     <div class="col-6">
-                        <label for="inputCity" class="form-label float-start">Last Name</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <label for="lastName" class="form-label float-start">Last Name</label>
+                        <input type="text" class="form-control" id="lastName">
                     </div>
                     <div class="col-6">
-                        <label for="inputZip" class="form-label float-start">City</label>
-                        <input type="text" class="form-control" id="inputZip">
+                        <label for="city" class="form-label float-start">City</label>
+                        <input type="text" class="form-control" id="city">
                     </div>
                     <div class="col-3">
                         <label for="inputState" class="form-label float-start">State</label>
@@ -54,27 +55,27 @@
                         </select>
                     </div>
                     <div class="col-3">
-                        <label for="inputZip" class="form-label float-start">Postal Code</label>
-                        <input type="text" class="form-control" id="inputZip">
+                        <label for="postalState" class="form-label float-start">Postal Code</label>
+                        <input type="number" class="form-control" id="postalState">
                     </div>
                     <div class="col-6">
-                        <label for="option2" class="form-label d-flex justify-content-start col-12">We accept:</label><br>
+                        <label for="option1" class="form-label d-flex justify-content-start col-12">We accept:</label><br>
                         <div class="btn btn-secondary float-start">
-                            <input type="radio" class="m-2" name="options" id="option2" autocomplete="off"><i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i>
+                            <input type="radio" class="m-2" name="options" id="option1" autocomplete="off"><i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i>
                             <input type="radio" class="m-2" name="options" id="option2" autocomplete="off"><i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i>
-                            <input type="radio" class="m-2" name="options" id="option2" autocomplete="off"><i class="fa-brands fa-cc-diners-club" style="color: #ffffff;"></i>
-                            <input type="radio" class="m-2" name="options" id="option2" autocomplete="off"><i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i>
+                            <input type="radio" class="m-2" name="options" id="option3" autocomplete="off"><i class="fa-brands fa-cc-diners-club" style="color: #ffffff;"></i>
+                            <input type="radio" class="m-2" name="options" id="option4" autocomplete="off"><i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i>
                         </div>
                     </div>
                     <div class="col-6">
-                        <label for="inputZip" class="form-label float-start">Message</label>
-                        <textarea type="text" class="form-control" id="inputZip"></textarea>
+                        <label for="message" class="form-label float-start">Message</label>
+                        <textarea type="text" class="form-control" id="message"></textarea>
                         <p class="small float-start">add any notes here.</p>
                     </div>
                 </form>
             </div>
             <div class="card-footer text-body-secondary">
-                <button type="button" class="btn btn-primary float-end m-2">Send</button>
+                <button type="submit" onclick="alertInput()" class="btn btn-primary float-end m-2">Send</button>
                 <button type="button" class="btn btn-secondary float-end my-2">Cancel</button>
             </div>
         </div>
