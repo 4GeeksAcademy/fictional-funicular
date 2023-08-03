@@ -19,17 +19,20 @@
                 <h1 class="float-start">Titulo</h1>
             </div>
             <div class="card-body">
-                <form class="row g-3" id="form" onsubmit="alertInput()">
+                <form class="row g-3" id="form" onsubmit="validar()">
                     <div class="alert alert-danger" hidden id="alert" role="alert">
-                        <p class="float-start m-0">alertaaaaaaaaaaaaaaa</p>
+                        <p class="float-start m-0">Che, te faltó un campo</p>
                     </div>
+                    <!-- <div class="alert alert-success" hidden id="alert2" role="alert">
+                        <p class="float-start m-0">Muy bien!!!</p>
+                    </div> -->
                     <div class="col-md-5">
                         <label for="card" class="form-label float-start">Card #</label>
                         <input type="number" class="form-control" id="card" placeholder="XXXXXXXXXXXXXXXXX">
                     </div>
                     <div class="col-md-3">
                         <label for="cvc" class="form-label float-start">CVC #</label>
-                        <input type="text" class="form-control" id="cvc" placeholder="0000">
+                        <input type="number" class="form-control" id="cvc" placeholder="0000">
                     </div>
                     <div class="col-4">
                         <label for="amount" class="form-label float-start">Amount</label>
@@ -62,12 +65,17 @@
                         <input type="number" class="form-control" id="postalState">
                     </div>
                     <div class="col-6">
-                        <label for="option1" class="form-label d-flex justify-content-start col-12">We accept:</label><br>
+                        <label for="option1" class="form-label d-flex justify-content-start col-12">We
+                            accept:</label><br>
                         <div class="btn btn-secondary float-start">
-                            <input type="radio" class="m-2" name="options" id="option1" autocomplete="off"><i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i>
-                            <input type="radio" class="m-2" name="options" id="option2" autocomplete="off"><i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i>
-                            <input type="radio" class="m-2" name="options" id="option3" autocomplete="off"><i class="fa-brands fa-cc-diners-club" style="color: #ffffff;"></i>
-                            <input type="radio" class="m-2" name="options" id="option4" autocomplete="off"><i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i>
+                            <input type="radio" class="m-2" name="options" id="option1" autocomplete="off"
+                                value="masterCard"><i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i>
+                            <input type="radio" class="m-2" name="options" id="option2" autocomplete="off"
+                                value="masterCard"><i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i>
+                            <input type="radio" class="m-2" name="options" id="option3" autocomplete="off"
+                                value="masterCard"><i class="fa-brands fa-cc-diners-club" style="color: #ffffff;"></i>
+                            <input type="radio" class="m-2" name="options" id="option4" autocomplete="off"
+                                value="masterCard"><i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i>
                         </div>
                     </div>
                     <div class="col-6">
@@ -75,11 +83,12 @@
                         <textarea type="text" class="form-control" id="message"></textarea>
                         <p class="small float-start">add any notes here.</p>
                     </div>
+                    <div class="card-footer text-body-secondary">
+                        <button type="submit" onclick="alertInput()" id="btn" class="btn btn-primary float-end m-2"
+                            value="send">Send</button>
+                        <button type="button" class="btn btn-secondary float-end my-2" value="cancel">Cancel</button>
+                    </div>
                 </form>
-            </div>
-            <div class="card-footer text-body-secondary">
-                <button type="submit" onclick="alertInput()" class="btn btn-primary float-end m-2">Send</button>
-                <button type="button" class="btn btn-secondary float-end my-2">Cancel</button>
             </div>
         </div>
     </div>
