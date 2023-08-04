@@ -16,16 +16,16 @@
     <div class="m-5">
         <div class="card text-center">
             <div class="card-header">
-                <h1 class="float-start">Titulo</h1>
+                <h1 class="float-start">Pagame por favor</h1>
             </div>
             <div class="card-body">
                 <form class="row g-3" id="form" onsubmit="validar()">
                     <div class="alert alert-danger" hidden id="alert" role="alert">
                         <p class="float-start m-0">Che, te faltó un campo</p>
                     </div>
-                    <!-- <div class="alert alert-success" hidden id="alert2" role="alert">
+                    <div class="alert alert-success" hidden id="alert2" role="alert">
                         <p class="float-start m-0">Muy bien!!!</p>
-                    </div> -->
+                    </div>
                     <div class="col-md-5">
                         <label for="card" class="form-label float-start">Card #</label>
                         <input type="number" class="form-control" id="card" placeholder="XXXXXXXXXXXXXXXXX">
@@ -67,7 +67,7 @@
                     <div class="col-6">
                         <label for="option1" class="form-label d-flex justify-content-start col-12">We
                             accept:</label><br>
-                        <div class="btn btn-secondary float-start">
+                        <div class="btn btn-secondary float-start" id="credit">
                             <input type="radio" class="m-2" name="options" id="option1" autocomplete="off"
                                 value="masterCard"><i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i>
                             <input type="radio" class="m-2" name="options" id="option2" autocomplete="off"
